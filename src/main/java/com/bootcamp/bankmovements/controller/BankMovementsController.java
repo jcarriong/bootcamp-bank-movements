@@ -24,7 +24,7 @@ public class BankMovementsController {
     public Flux<BankMovements> findAll() {
         log.info("All bank movements were consulted");
         return bankMovementsService.findAll()
-                .doOnNext(creditCard -> creditCard.toString());
+                .doOnNext(bankMovements -> bankMovements.toString());
     }
 
     @GetMapping("/findById/{id}")

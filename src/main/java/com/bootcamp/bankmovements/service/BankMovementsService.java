@@ -10,4 +10,8 @@ public interface BankMovementsService {
     Mono<BankMovements> findById(String id);
 
     Mono<BankMovements> save(BankMovements bankMovements);
+
+    Mono<BankMovements> updateMovement(BankMovements bankMovements, String idMovement);
+
+    Mono<BankMovements> deleteMovement(String idMovement);
 }
